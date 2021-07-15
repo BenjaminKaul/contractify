@@ -1,6 +1,6 @@
 /**
  * Merge two objects and their types
- * 
+ *
  * @param t First object
  * @param u Second object
  */

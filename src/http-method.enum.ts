@@ -6,7 +6,7 @@ export enum HttpMethod {
   Patch = 'patch',
   Post = 'post',
   Put = 'put',
-  Delete = 'delete'
+  Delete = 'delete',
 }
 
 /**
@@ -17,4 +17,7 @@ export type MethodSupportingQueryParameter = HttpMethod.Get | HttpMethod.Delete;
 /**
  * Http methods supporting a request body
  */
-export type MethodSupportingRequestBody = HttpMethod.Patch | HttpMethod.Post | HttpMethod.Put;
+export type MethodSupportingRequestBody =
+  | HttpMethod.Patch
+  | HttpMethod.Post
+  | HttpMethod.Put;

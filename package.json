@@ -7,10 +7,11 @@
   "main": "dist/index.js",
   "scripts": {
     "commit": "cz",
-    "release": "standard-version",
+    "release": "standard-version --no-verify",
     "prepare": "husky install",
     "build": "tsc",
-    "serve": "tsc --watch"
+    "serve": "tsc --watch",
+    "format": "prettier --write --ignore-unknown"
   },
   "keywords": [
     "REST",
@@ -26,11 +27,16 @@
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.2.0",
     "husky": "7.0.1",
+    "lint-staged": "11.0.1",
+    "prettier": "2.3.2",
     "standard-version": "9.3.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

@@ -1,6 +1,6 @@
-import { ExtractPathParameters } from "./path-parameters.interface";
-import { ExtractQueryParameters } from "./query-parameters.interface";
-import { ExtractRequestBody } from "./request-body.interface";
+import { ExtractPathParameters } from './path-parameters.interface';
+import { ExtractQueryParameters } from './query-parameters.interface';
+import { ExtractRequestBody } from './request-body.interface';
 
 /**
  * All combined parameters for an api contract

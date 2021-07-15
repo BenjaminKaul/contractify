@@ -1,11 +1,11 @@
 import { Readable } from 'stream';
-import { ResultEncoding } from "./encoding.enum";
+import { ResultEncoding } from './encoding.enum';
 
 /**
  * Return value container
  */
 export interface Returns<RESULT_TYPE = any> {
-  result: RESULT_TYPE
+  result: RESULT_TYPE;
 }
 
 /**
@@ -19,7 +19,8 @@ export interface ReturnsJSON<RESULT_TYPE = any> extends Returns<RESULT_TYPE> {
 /**
  * Raw return value container
  */
-export interface ReturnsRaw<RESULT_TYPE extends string = string> extends Returns<RESULT_TYPE> {
+export interface ReturnsRaw<RESULT_TYPE extends string = string>
+  extends Returns<RESULT_TYPE> {
   resultEncoding: ResultEncoding.Raw;
   contentType?: string;
 }
