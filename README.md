@@ -1,5 +1,7 @@
 # Contractify
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/BenjaminKaul/contractify)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/BenjaminKaul/contractify/typescript)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 Provides tools to create and implement REST API contracts.
