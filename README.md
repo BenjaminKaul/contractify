@@ -4,6 +4,8 @@
 
 Provides tools to create and implement REST API contracts.
 
+[Changelog](CHANGELOG.md) | [License](LICENSE.md)
+
 ## Usage
 
 ```typescript
@@ -97,6 +99,33 @@ const options = {
 };
 ```
 
+The contract funtion factory works with every http client that looks like the following out of the box:
+
+```typescript
+export interface HttpClient<REQUEST_OPTIONS> {
+  /**
+   * Execute a get request
+   */
+  get: (url: string, options?: REQUEST_OPTIONS) => any;
+  /**
+   * Execute a delete request
+   */
+  delete: (url: string, options?: REQUEST_OPTIONS) => any;
+  /**
+   * Execute a patch request
+   */
+  patch: (url: string, body?: any, options?: REQUEST_OPTIONS) => any;
+  /**
+   * Execute a post request
+   */
+  post: (url: string, body?: any, options?: REQUEST_OPTIONS) => any;
+  /**
+   * Execute a put request
+   */
+  put: (url: string, body?: any, options?: REQUEST_OPTIONS) => any;
+}
+```
+
 ## API Helper
 
 For more control over the function creation, the ApiHelper provides some utilites
@@ -137,5 +166,3 @@ const Profile = {
 
 My query parameters dont get injected?
 > Set the queryParameterKey in the contract function factory options to the one your http client is using.
-
-### [Changelog](CHANGELOG.md)
